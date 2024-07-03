@@ -1,0 +1,25 @@
+:root{
+    --inputBorderNTextClr: #33189f;
+}
+.textInput{
+    position:relative;
+}
+.textInput::before, .textInput::after{
+    position: absolute;
+    left: 50%;
+    bottom: -9px;
+    width: 0px;
+    content: '';
+    height: 2px;
+    background-color: var(--inputBorderNTextClr);
+    transition: 0.2s ease;
+}
+.textInput.mouseDown::before{
+    width: 50%;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.textInput.mouseDown::after{
+    width: 50%;
+}

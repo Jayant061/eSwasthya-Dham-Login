@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eSwasthy Dham</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="inputstyles.css">
+    <link rel="stylesheet" href="./responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root">
+      <div class="bg-image" id="bg-image">
+        <div class="wrapper">
+            <div class="signinForm">
+          <div class="formContainer">
+            <div class="logo">
+              <img
+                src="./assests/logos/Uttarakhand gov-NxL8O97F.svg"
+                alt="Uk govt logo"
+              />
+              <hr />
+              <img src="./assests/logos/NHM-BxL39F6z.png" alt="N H M" />
+            </div>
+            <form onsubmit="handleSubmit(event)" autocomplete="off">
+              <div class="description">
+                <p>Log in to eSwasthya Dham</p>
+              </div>
+              <div class="username">
+                <div class="input">
+                  <label for="login-username">Username or Phone Number <span>*</span></label>
+
+                  <div class="textInput">
+                  <input
+                  onkeypress="handleChange()"
+                  onchange="handleChange(event)"
+                    type="text"
+                    class="text"
+                    required
+                    id="login-username"
+                    placeholder="Enter your username or phone number"
+                  />
+                </div>
+
+                </div>
+                <span id="emptyInputWarn">Please enter your username or phone number</span>
+              </div>
+                <button class="continueButton">Continue</button>
+              <div class="formNavigation">
+                <span>Don't have an account?</span>
+                <a href="">Sign up</a>
+              </div>
+            </form>
+            <div class="advisory">
+              Learn about your <a href="">Yatra Do's and Dont's</a>
+            </div>
+            <div class="footer">
+              <div class="contact">
+                Need help? <a href="">Contact us</a>
+              </div>
+              <div class="ftrlogo">
+                <img src="./assests/logos/wish-logo-DtB4JcQN.svg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script async src="./index.js"></script>
+</html>

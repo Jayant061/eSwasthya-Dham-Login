@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 16px;
+  font-family: Inter;
+  --inputBorderNTextClr: #33189f;
+  --emptyInputWarnClr: rgb(212, 3, 3);
+  --textClr: #262626;
+  --inputHoverBorderClr : gray;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+}
+.bg-image {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./assests/images/uk-temple-6.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    overflow-y: auto;
+
+    .signinForm {
+      width: 50%;
+      min-height: 100%;
+      height: fit-content;
+      padding: 15px 0;
+      display: flex;
+      justify-content: start;
+
+      .formContainer {
+        width: 75%;
+        background-color: #fff;
+        border-radius: 8px;
+
+        .logo {
+          width: 25%;
+          height: 44px;
+          margin: 4rem auto 2.66rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          hr {
+            height: 100%;
+          }
+
+          img {
+            width: 100%;
+            height: 44px;
+          }
+        }
+        form {
+          padding: 0 3rem;
+          .description {
+            margin-bottom: 28px;
+            text-align: center;
+
+            p {
+              font-size: 2rem;
+              font-weight: 600;
+              line-height: 42px;
+              color: #202020;
+            }
+          }
+
+          .username {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 4.53em 0 4.26em;
+            position: relative;
+          }
+          .input {
+            position: relative;
+            padding-bottom: 10px;
+
+            label {
+              position: absolute;
+              top: -100%;
+              font-size: 0.75rem;
+              font-weight: 600;
+              left: 0.4rem;
+              span {
+                color: var(--emptyInputWarnClr);
+              }
+            }
+            .textInput {
+              height: 1.1rem;
+            }
+            input {
+              width: 100%;
+              height: max-content;
+              padding: 4px 0 5px;
+              padding-left: 0.4rem;
+              border: none;
+              outline: none;
+              border-bottom: 1px solid var(--inputHoverBorderClr);
+              font-size: 0.9rem;
+
+              &::placeholder {
+                font-weight: 200;
+                color: rgb(170, 170, 170);
+              }
+
+              &:hover {
+                background-color: #f5f3fa;
+                border-bottom: 2px solid var(--inputHoverBorderClr);
+              }
+            }
+
+          }
+
+          #emptyInputWarn {
+            position: absolute;
+            top: 100%;
+            font-size: 0.7rem;
+            padding-left: 0.4rem;
+            color: var(--emptyInputWarnClr);
+          }
+
+          .continueButton {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            padding: 8px 0;
+            border-radius: 8px;
+            border: 2px solid rgb(51, 24, 159);
+            background-color: #33189f;
+            box-shadow: 0 3px 6px #2020204d;
+            color: white;
+            font-size: 1rem;
+            line-height: 1.25rem;
+            font-weight: 400;
+            cursor: pointer;
+          }
+          .formNavigation {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 18px 0 2.25rem;
+            gap: 8px;
+
+            span {
+              font-size: 0.875rem;
+              line-height: 1rem;
+              font-weight: 400;
+              color: var(--textClr);
+            }
+            a {
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.1875rem;
+              text-decoration: underline;
+              color: #33189f;
+            }
+          }
+        }
+        .advisory {
+          text-align: center;
+          margin-bottom: 1rem;
+          font-size: 0.93rem;
+          font-weight: 400;
+          line-height: 1rem;
+          color: var(--textClr);
+        }
+        .footer {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border-radius: 0 0 8px 8px;
+          background-color: #f5f3fa;
+
+          .contact {
+            text-align: center;
+            font-size: 0.93rem;
+            font-weight: 400;
+            line-height: 1rem;
+            margin-left: 2rem;
+            color: var(--textClr);
+          }
+          .ftrlogo {
+            margin: 8px 26px 8px 0;
+          }
+        }
+      }
+    }
+  }
+}
